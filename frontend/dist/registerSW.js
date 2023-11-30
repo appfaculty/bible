@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/local/bible/frontend/dist/sw.js', { scope: '/local/bible/frontend/dist/' })})}

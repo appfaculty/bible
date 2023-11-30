@@ -1,0 +1,77 @@
+a {
+  text-decoration: none;
+}
+
+body { 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; 
+}
+@supports (font-variation-settings: normal) {
+  body { 
+    font-family: 'Inter var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; 
+    font-feature-settings: "cv03", "cv04", "cv11";
+  }
+}
+
+body {
+  /*background-color: #f1f5f9 !important;*/
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.4285714286;
+  /*color: #1d273b;*/
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+.td-truncate {
+  width: 1px;
+}
+.mantine-InputWrapper-label {
+  padding-bottom: 5px;
+}
+.note p {
+  margin: 0;
+  margin-bottom: 0.4375rem;
+}
+.note>*:last-child {
+  margin-bottom: 0;
+}
+.note>strong {
+  font-weight: 600;
+}
+.mantine-RichTextEditor-content .ProseMirror {
+  padding: 0 !important;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.cursor-text {
+  cursor: text;
+  cursor: -moz-text;
+  cursor: -webkit-text;
+}
+.grabbable {
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+/* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.grabbable:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+.d-none {
+  display: none;
+}
+@media (min-width: 48em) {
+  .d-sm-block {
+    display: block;
+  }
+}

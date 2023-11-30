@@ -1,0 +1,8 @@
+
+.vh100 {
+  /*Based on https://stackoverflow.com/questions/52848856/100vh-height-when-address-bar-is-shown-chrome-mobile*/
+  height: calc(100vh - 54px); /* old browsers */  
+  height: calc(100dvh - 54px); /* new browsers */
+  min-height: calc(100vh - 54px); /* old browsers */  
+  min-height: calc(100dvh - 54px); /* new browsers */
+}

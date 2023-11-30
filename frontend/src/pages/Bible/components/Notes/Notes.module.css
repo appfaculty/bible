@@ -1,0 +1,22 @@
+.note {
+  border: 0.0625rem solid transparent;
+}
+.note:hover {
+  border: 0.0625rem solid #dee2e6;
+}
+.notedark:hover {
+  border: 0.0625rem solid #3f3f3f;
+}
+.note.submitting {
+  border: 0.0625rem solid transparent;
+}
+.buttonWrap {
+  visibility: hidden;
+}
+.note:hover .buttonWrap {
+  opacity: 1;
+  visibility: visible;
+}
+.button {
+  background-color: rgba(34,139,230,.1);
+}

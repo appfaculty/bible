@@ -1,0 +1,17 @@
+
+.mvh100 {
+  /*Based on https://stackoverflow.com/questions/52848856/100vh-height-when-address-bar-is-shown-chrome-mobile*/
+  min-height: 100vh; /* old browsers */  
+  min-height: 100dvh; /* new browsers */
+}
+.print {
+  color: #000;
+}
+@media print {
+  .print {
+    padding: 0 !important;
+    zoom: 0.8; 
+    -moz-transform: scale(0.8); 
+    -moz-transform-origin: 0 0;
+  }
+}

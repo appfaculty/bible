@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/bible/db" VERSION="20210217" COMMENT="XMLDB file for bible plugin"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+
+    <TABLE NAME="bible_notes" COMMENT="">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="username" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="scripture" TYPE="char" LENGTH="25" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="note" TYPE="text" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="deleted" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="metadata" TYPE="text" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="username" UNIQUE="false" FIELDS="username"/>
+        <INDEX NAME="scripture" UNIQUE="false" FIELDS="scripture"/>
+      </INDEXES>
+    </TABLE>
+
+    <TABLE NAME="bible_note_tags" COMMENT="">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="noteid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="username" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="fk_noteid" TYPE="foreign" FIELDS="noteid" REFTABLE="bible_notes" REFFIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="username" UNIQUE="false" FIELDS="username"/>
+      </INDEXES>
+    </TABLE>
+
+  </TABLES>
+</XMLDB>
